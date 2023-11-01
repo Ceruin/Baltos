@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Development\\Godot Development\\Baltos\\Baltos.csproj": {}
+    "E:\\DEVELOPMENT\\GODOT DEVELOPMENT\\BALTOS\\Baltos.csproj": {}
   },
   "projects": {
-    "E:\\Development\\Godot Development\\Baltos\\Baltos.csproj": {
+    "E:\\DEVELOPMENT\\GODOT DEVELOPMENT\\BALTOS\\Baltos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Development\\Godot Development\\Baltos\\Baltos.csproj",
+        "projectUniqueName": "E:\\DEVELOPMENT\\GODOT DEVELOPMENT\\BALTOS\\Baltos.csproj",
         "projectName": "Baltos",
-        "projectPath": "E:\\Development\\Godot Development\\Baltos\\Baltos.csproj",
+        "projectPath": "E:\\DEVELOPMENT\\GODOT DEVELOPMENT\\BALTOS\\Baltos.csproj",
         "packagesPath": "C:\\Users\\mmoco\\.nuget\\packages\\",
-        "outputPath": "E:\\Development\\Godot Development\\Baltos\\.godot\\mono\\temp\\obj\\",
+        "outputPath": "E:\\DEVELOPMENT\\GODOT DEVELOPMENT\\BALTOS\\.godot\\mono\\temp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mmoco\\AppData\\Roaming\\NuGet\\NuGet.Config",

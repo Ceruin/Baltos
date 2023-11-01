@@ -1,7 +1,7 @@
 7555aeb530264b75188b2fe7cefa125f
-::res://::1698797271
+::res://::1698810356
 icon.svg::CompressedTexture2D::7412979503199849142::1697000119::1697000123::1::::<><>::
-Player.cs::CSharpScript::-1::1697853674::0::1::::<><>::
+Player.cs::CSharpScript::-1::1698810338::0::1::::<><>::
 README.md::TextFile::-1::1697844901::0::1::::<><>::
 ::res://addons/::1697852349
 ::res://addons/kaykit_character_pack_adventures/::1697852305
@@ -705,9 +705,10 @@ VoxLayer.gd::GDScript::-1::1697844901::0::1::::<>RefCounted<>::
 VoxMaterial.gd::GDScript::-1::1697844901::0::1::::<>RefCounted<>::
 VoxNode.gd::GDScript::-1::1697844901::0::1::::<>RefCounted<>::
 ::res://Art/::1697851505
-::res://Scenes/::1697860655
+::res://Scenes/::1698810356
+friend.tscn::PackedScene::8983704213055738956::1698807552::0::1::::<><>::uid://q2uopgdi2bvj::::res://addons/kaykit_dungeon_remastered/Assets/gltf/stool.gltf.glb
+main.tscn::PackedScene::2889339776660297972::1698807552::0::1::::<><>::uid://c1csriku6k3tb::::res://Scenes/player.tscn
+player.tscn::PackedScene::6603003758434749495::1698810338::0::1::::<><>::res://Scripts/Player.cs<>uid://b16v31matb24::::res://addons/kaykit_character_pack_adventures/Characters/gltf/Mage.glb
+::res://Scripts/::1698810356
 friend.cs::CSharpScript::-1::1697860655::0::1::::<><>::
-friend.tscn::PackedScene::8983704213055738956::1697858931::0::1::::<><>::uid://q2uopgdi2bvj::::res://addons/kaykit_dungeon_remastered/Assets/gltf/stool.gltf.glb
-main.tscn::PackedScene::2889339776660297972::1697853918::0::1::::<><>::uid://c1csriku6k3tb::::res://Scenes/player.tscn
-player.tscn::PackedScene::6603003758434749495::1697853865::0::1::::<><>::res://Player.cs<>uid://b16v31matb24::::res://addons/kaykit_character_pack_adventures/Characters/gltf/Mage.glb
-::res://Scripts/::1697000136
+Player.cs::CSharpScript::-1::1697853674::0::1::::<><>::
