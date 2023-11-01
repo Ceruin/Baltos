@@ -1,0 +1,17 @@
+E:\Development\Godot Development\Baltos\.godot\mono\temp\bin\Debug\Baltos.deps.json
+E:\Development\Godot Development\Baltos\.godot\mono\temp\bin\Debug\Baltos.runtimeconfig.json
+E:\Development\Godot Development\Baltos\.godot\mono\temp\bin\Debug\Baltos.dll
+E:\Development\Godot Development\Baltos\.godot\mono\temp\bin\Debug\Baltos.pdb
+E:\Development\Godot Development\Baltos\.godot\mono\temp\bin\Debug\GodotSharp.dll
+E:\Development\Godot Development\Baltos\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
+E:\Development\Godot Development\Baltos\.godot\mono\temp\obj\Debug\Baltos.csproj.AssemblyReference.cache
+E:\Development\Godot Development\Baltos\.godot\mono\temp\obj\Debug\Baltos.GeneratedMSBuildEditorConfig.editorconfig
+E:\Development\Godot Development\Baltos\.godot\mono\temp\obj\Debug\Baltos.AssemblyInfoInputs.cache
+E:\Development\Godot Development\Baltos\.godot\mono\temp\obj\Debug\Baltos.AssemblyInfo.cs
+E:\Development\Godot Development\Baltos\.godot\mono\temp\obj\Debug\Baltos.csproj.CoreCompileInputs.cache
+E:\Development\Godot Development\Baltos\.godot\mono\temp\obj\Debug\Baltos.csproj.CopyComplete
+E:\Development\Godot Development\Baltos\.godot\mono\temp\obj\Debug\Baltos.dll
+E:\Development\Godot Development\Baltos\.godot\mono\temp\obj\Debug\refint\Baltos.dll
+E:\Development\Godot Development\Baltos\.godot\mono\temp\obj\Debug\Baltos.pdb
+E:\Development\Godot Development\Baltos\.godot\mono\temp\obj\Debug\Baltos.genruntimeconfig.cache
+E:\Development\Godot Development\Baltos\.godot\mono\temp\obj\Debug\ref\Baltos.dll
