@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://d081kcahtnxlc"]
 
-[ext_resource type="PackedScene" uid="uid://q2uopgdi2bvj" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/stool.gltf.glb" id="1_hu0an"]
+[ext_resource type="PackedScene" uid="uid://q2uopgdi2bvj" path="res://addons/kaykit_dungeon_remastered/Assets/gltf/sword_shield.gltf.glb" id="1_hu0an"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_l383e"]
 size = Vector3(1, 1.06117, 0.746133)

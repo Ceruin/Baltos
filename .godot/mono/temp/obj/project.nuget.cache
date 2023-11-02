@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "tMpOiKRZrz9m7JOvB7cJ7PRnndYWIXwSpGVKxIknTocYXl7VA7bO0kbTptQd0vxu9RZjlZICWEeT72DBZLO2tQ==",
+  "dgSpecHash": "fABPlugx/giCNwFtiJTpZWeg/JuzDx56kWv5rRq15F4eFqZaJbDaJ+1GaSmGLc9W4MKkIfTIFF/7XpjPqCBBNA==",
   "success": true,
-  "projectFilePath": "E:\\Development\\Godot Development\\Baltos\\Baltos.csproj",
+  "projectFilePath": "C:\\Development\\Godot Projects\\Baltos\\Baltos.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\mmoco\\.nuget\\packages\\godot.sourcegenerators\\4.1.1\\godot.sourcegenerators.4.1.1.nupkg.sha512",
-    "C:\\Users\\mmoco\\.nuget\\packages\\godotsharp\\4.1.1\\godotsharp.4.1.1.nupkg.sha512",
-    "C:\\Users\\mmoco\\.nuget\\packages\\godotsharpeditor\\4.1.1\\godotsharpeditor.4.1.1.nupkg.sha512"
+    "C:\\Users\\mmoco\\.nuget\\packages\\godot.sourcegenerators\\4.1.3\\godot.sourcegenerators.4.1.3.nupkg.sha512",
+    "C:\\Users\\mmoco\\.nuget\\packages\\godotsharp\\4.1.3\\godotsharp.4.1.3.nupkg.sha512",
+    "C:\\Users\\mmoco\\.nuget\\packages\\godotsharpeditor\\4.1.3\\godotsharpeditor.4.1.3.nupkg.sha512"
   ],
   "logs": []
 }
