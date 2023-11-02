@@ -1,6 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://bhfvaeutwksme"]
+[gd_scene load_steps=7 format=3 uid="uid://bhfvaeutwksme"]
 
 [ext_resource type="PackedScene" uid="uid://c1csriku6k3tb" path="res://Scenes/player.tscn" id="1_h3dj2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_r57q4"]
+size = Vector3(1, 1, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_33t07"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qvily"]
+size = Vector3(1, 1, 5)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5pw4y"]
 size = Vector3(50, 2, 50)
@@ -9,6 +17,57 @@ size = Vector3(50, 2, 50)
 size = Vector3(50, 2, 50)
 
 [node name="Main" type="Node"]
+
+[node name="Basic Brick6" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.2637, 2.62479, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Basic Brick6"]
+shape = SubResource("BoxShape3D_r57q4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Basic Brick6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 5, 0, 0, 0)
+mesh = SubResource("BoxMesh_33t07")
+skeleton = NodePath("../../Basic Brick6")
+
+[node name="Basic Brick5" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.2198, 2.23809, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Basic Brick5"]
+shape = SubResource("BoxShape3D_qvily")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Basic Brick5"]
+mesh = SubResource("BoxMesh_33t07")
+skeleton = NodePath("../../Basic Brick5")
+
+[node name="Basic Brick4" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.17581, 1.85139, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Basic Brick4"]
+shape = SubResource("BoxShape3D_r57q4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Basic Brick4"]
+mesh = SubResource("BoxMesh_33t07")
+skeleton = NodePath("../../Basic Brick4")
+
+[node name="Basic Brick3" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.13186, 1.46469, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Basic Brick3"]
+shape = SubResource("BoxShape3D_r57q4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Basic Brick3"]
+mesh = SubResource("BoxMesh_33t07")
+skeleton = NodePath("../../Basic Brick3")
+
+[node name="Basic Brick2" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.08791, 1.07799, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Basic Brick2"]
+shape = SubResource("BoxShape3D_r57q4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Basic Brick2"]
+mesh = SubResource("BoxMesh_33t07")
+skeleton = NodePath("../../Basic Brick2")
 
 [node name="Ground" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
@@ -30,7 +89,15 @@ shadow_enabled = true
 transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Player/CameraPivot"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 19)
-projection = 1
+transform = Transform3D(1, 0, 0, 0, 0.976672, 0.214735, 0, -0.214735, 0.976672, 0, 0, 19)
 size = 20.0
 far = 100.0
+
+[node name="Basic Brick" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.04395, 0.3867, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Basic Brick"]
+shape = SubResource("BoxShape3D_r57q4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Basic Brick"]
+mesh = SubResource("BoxMesh_33t07")

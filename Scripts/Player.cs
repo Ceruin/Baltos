@@ -7,11 +7,14 @@ public partial class Player : CharacterBody3D
     public int Speed { get; set; } = 14;
     [Export]
     public int FallAcceleration { get; set; } = 75;
-
     [Export]
     public int JumpImpulse { get; set; } = 20;
+    [Export]
+    public float JumpTime { get; set; } = 0.5f;
 
     private Vector3 _velocity = Vector3.Zero;
+    private float _jumpProgress = 0f;
+    private float _jumpGoal = 0f;
 
     public override void _PhysicsProcess(double delta)
     {
@@ -42,16 +45,27 @@ public partial class Player : CharacterBody3D
 
         _velocity.X = direction.X * Speed;
         _velocity.Z = direction.Z * Speed;
-        _velocity.Y = direction.Y;
 
-        if (!IsOnFloor())
-        {
-            _velocity.Y -= FallAcceleration * (float)delta;
-        }
 
         if (IsOnFloor() && Input.IsActionJustPressed("jump"))
         {
-            _velocity.Y = JumpImpulse;
+            _jumpProgress = 0f;
+            _jumpGoal = _velocity.Y + JumpImpulse;
+            GD.Print("Jump Prog: " + _jumpProgress);
+            GD.Print("Jump Goal: " + _jumpGoal);
+        }
+
+        if (_jumpProgress < _jumpGoal)
+        {
+            float jumpHeight = Mathf.Lerp(0, JumpImpulse, JumpTime);
+            _velocity.Y = jumpHeight;
+            _jumpProgress += _velocity.Y;
+            GD.Print("Jump Prog: " + _jumpProgress);
+            GD.Print("Jump Goal: " + _jumpGoal);
+        }
+        else if (!IsOnFloor())
+        {
+            _velocity.Y -= FallAcceleration * (float)delta;
         }
 
         Velocity = _velocity;

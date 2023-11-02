@@ -1,12 +1,12 @@
-VisibleOnScreenNotifier3D
+MeshInstance3D
 CollisionShape3D
+StaticBody3D
+VisibleOnScreenNotifier3D
 Node3D
 CharacterBody3D
 Camera3D
 Marker3D
 DirectionalLight3D
-MeshInstance3D
-StaticBody3D
 Node
 Skeleton3D
 TileMap
