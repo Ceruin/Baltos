@@ -3,3 +3,4 @@ res://Scenes/player.tscn
 res://Scenes/friend.tscn
 res://Player.cs
 res://Scenes/friend.cs
+res://Scripts/Player.cs

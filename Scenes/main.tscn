@@ -22,6 +22,7 @@ mesh = SubResource("BoxMesh_0pwk5")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.691021, 0.722835, 0, -0.722835, -0.691021, 0, 8.27668, 0)
+shadow_enabled = true
 
 [node name="Player" parent="." instance=ExtResource("1_h3dj2")]
 
