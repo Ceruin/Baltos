@@ -46,7 +46,7 @@ public partial class Player : CharacterBody3D
 	}
 
 	[Export]
-	public float JumpHeight { get; set; } = 20f;
+	public float JumpHeight { get; set; } = 5;
 
 	[Export]
 	public int JumpImpulse { get; set; } = 20;
