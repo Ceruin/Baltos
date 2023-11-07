@@ -1,4 +1,4 @@
-res://Scenes/main.tscn
 res://Scenes/player.tscn
-res://Scenes/friend.tscn
 res://Scripts/Player.cs
+res://Scenes/main.tscn
+res://Scenes/friend.tscn
