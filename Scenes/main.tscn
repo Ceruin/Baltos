@@ -24,7 +24,7 @@ size = Vector3(50, 2, 50)
 [node name="Main" type="Node"]
 
 [node name="Brick" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.234, 2.62479, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.234, 4.01949, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Brick"]
 shape = SubResource("BoxShape3D_r57q4")
@@ -48,13 +48,13 @@ transform = Transform3D(1, 0, 0, 0, -0.691021, 0.722835, 0, -0.722835, -0.691021
 shadow_enabled = true
 
 [node name="Player" parent="." instance=ExtResource("1_h3dj2")]
+JumpImpulse = 25
 
 [node name="CameraPivot" type="Marker3D" parent="Player"]
 transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Player/CameraPivot"]
 transform = Transform3D(1, 0, 0, 0, 0.976672, 0.214735, 0, -0.214735, 0.976672, 0, 0, 19)
-projection = 1
 size = 20.0
 far = 100.0
 

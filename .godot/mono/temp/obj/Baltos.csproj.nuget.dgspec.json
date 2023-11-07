@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Development\\Godot Projects\\Baltos\\Baltos.csproj": {}
+    "E:\\Development\\Godot Development\\Baltos\\Baltos.csproj": {}
   },
   "projects": {
-    "C:\\Development\\Godot Projects\\Baltos\\Baltos.csproj": {
+    "E:\\Development\\Godot Development\\Baltos\\Baltos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Development\\Godot Projects\\Baltos\\Baltos.csproj",
+        "projectUniqueName": "E:\\Development\\Godot Development\\Baltos\\Baltos.csproj",
         "projectName": "Baltos",
-        "projectPath": "C:\\Development\\Godot Projects\\Baltos\\Baltos.csproj",
+        "projectPath": "E:\\Development\\Godot Development\\Baltos\\Baltos.csproj",
         "packagesPath": "C:\\Users\\mmoco\\.nuget\\packages\\",
-        "outputPath": "C:\\Development\\Godot Projects\\Baltos\\.godot\\mono\\temp\\obj\\",
+        "outputPath": "E:\\Development\\Godot Development\\Baltos\\.godot\\mono\\temp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\mmoco\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\mmoco\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -40,15 +42,15 @@
           "dependencies": {
             "Godot.SourceGenerators": {
               "target": "Package",
-              "version": "[4.1.3, )"
+              "version": "[4.1.1, )"
             },
             "GodotSharp": {
               "target": "Package",
-              "version": "[4.1.3, )"
+              "version": "[4.1.1, )"
             },
             "GodotSharpEditor": {
               "target": "Package",
-              "version": "[4.1.3, )"
+              "version": "[4.1.1, )"
             }
           },
           "imports": [
@@ -67,7 +69,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }
