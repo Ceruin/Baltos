@@ -60,7 +60,10 @@ public partial class Player : CharacterBody3D
 
 	private void ApplyGravity(double delta)
 	{
-		_velocity.Y += Gravity * (float)delta;
+		if (!IsOnFloor())
+			_velocity.Y += Gravity * (float)delta;
+		else if (_velocity.Y <= 0)
+			_velocity.Y = 0;
 	}
 
 	private void HandleInput(double delta)
@@ -144,7 +147,8 @@ public partial class Player : CharacterBody3D
 	private void Move()
 	{
 		Velocity = _velocity;
-		MoveAndSlide();
+        GD.Print("Velocity: " + Velocity);
+        MoveAndSlide();
 	}
 
 	public override void _PhysicsProcess(double delta)
