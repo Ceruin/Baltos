@@ -6,7 +6,7 @@ using System.Diagnostics;
 public partial class Player : CharacterBody3D
 {
     #region Fields
-
+    // todo: gravity feels heavy
     private float _halfJumpTime = 0.5f;
     private Vector3 _velocity = Vector3.Zero;
     private bool canJump = true;
