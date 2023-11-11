@@ -8,7 +8,7 @@
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_a20u3")
 Gravity = -70.0
-JumpHeight = 2.0
+JumpHeight = 1.75
 Speed = 10
 
 [node name="Pivot" type="Node3D" parent="."]
