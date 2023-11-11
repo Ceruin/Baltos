@@ -6,8 +6,7 @@ using System.Diagnostics;
 public partial class Player : CharacterBody3D
 {
     #region Fields
-    // todo: gravity feels heavy
-    private float _halfJumpTime = 0.5f;
+    
     private Vector3 _velocity = Vector3.Zero;
     private bool canJump = true;
     private TimeSpan coyoteTime = new TimeSpan(0, 0, 0, 0, 300); 
@@ -17,35 +16,21 @@ public partial class Player : CharacterBody3D
 
     #region Properties
 
-    private float Gravity
-    {
-        get
-        {
-            return -InitialSpeed / _halfJumpTime;
-        }
-    }
-
-    private float InitialSpeed
-    {
-        get
-        {
-            return 2.0f * MaxHeight / _halfJumpTime;
-        }
-    }
-
-    private float MaxHeight
-    {
-        get
-        {
-            return JumpForce;
-        }
-    }
-
     [Export]
-    public float JumpForce { get; set; } = 5;
-
+    public float Gravity { get; set; } = -9.8f; // todo: gravity feels heavy
+    [Export]
+    public float JumpHeight { get; set; } = 5.0f; // Desired jump height in meters
     [Export]
     public int Speed { get; set; } = 14;
+
+    private float JumpForce
+    {
+        get
+        {
+            // Calculate the jump force based on the desired jump height and gravity
+            return Mathf.Sqrt(2.0f * Mathf.Abs(Gravity) * JumpHeight);
+        }
+    }
 
     #endregion Properties
 
