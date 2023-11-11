@@ -38,10 +38,16 @@ public partial class Player : CharacterBody3D
 
     private void ApplyGravity(double delta)
     {
-        if (!IsOnFloor())
+        GD.Print($@"On Cieling: {IsOnCeiling()}");
+        if (IsOnCeiling()) {
+            _velocity.Y = 0;
+            _velocity.Y += Gravity * (float)delta;
+        }
+        else if (!IsOnFloor())
             _velocity.Y += Gravity * (float)delta;
         else if (_velocity.Y <= 0)
             _velocity.Y = 0;
+        GD.Print($@"Velocity: {_velocity.Y}");
     }
 
     private void HandleInput(double delta)
@@ -101,7 +107,7 @@ public partial class Player : CharacterBody3D
         {
             Jump();
         }
-
+        
         MoveTowards(direction);
     }
 
@@ -127,6 +133,11 @@ public partial class Player : CharacterBody3D
         Velocity = _velocity;
         //GD.Print("Velocity: " + Velocity);
         MoveAndSlide();
+    }
+
+    public override void _Ready()
+    {
+        SlideOnCeiling = false; // does nothing
     }
 
     public override void _PhysicsProcess(double delta)
