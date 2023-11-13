@@ -34,6 +34,15 @@ public partial class Player : CharacterBody3D
 
     #endregion Properties
 
+    public static class PlayerStrings
+    {
+        public static StringName move_up = new StringName("move_up");
+        public static StringName move_down = new StringName("move_down");
+        public static StringName move_left = new StringName("move_left");
+        public static StringName move_right = new StringName("move_right");
+        public static StringName jump = new StringName("jump");
+    }
+
     #region Methods
 
     private void ApplyGravity(double delta)
@@ -54,19 +63,19 @@ public partial class Player : CharacterBody3D
     {
         var direction = Vector3.Zero;
 
-        if (Input.IsActionPressed("move_up"))
+        if (Input.IsActionPressed(PlayerStrings.move_up))
         {
             direction.Z -= 1;
         }
-        if (Input.IsActionPressed("move_down"))
+        if (Input.IsActionPressed(PlayerStrings.move_down))
         {
             direction.Z += 1;
         }
-        if (Input.IsActionPressed("move_left"))
+        if (Input.IsActionPressed(PlayerStrings.move_left))
         {
             direction.X -= 1;
         }
-        if (Input.IsActionPressed("move_right"))
+        if (Input.IsActionPressed(PlayerStrings.move_right))
         {
             direction.X += 1;
         }
@@ -103,7 +112,7 @@ public partial class Player : CharacterBody3D
         }
         //GD.Print($@"Coyote: {coyoteTimer.Elapsed}");
         // Implement Jump Buffering
-        if (Input.IsActionJustPressed("jump"))
+        if (Input.IsActionJustPressed(PlayerStrings.jump))
         {
             Jump();
         }
