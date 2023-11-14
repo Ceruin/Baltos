@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://c1csriku6k3tb"]
+[gd_scene load_steps=5 format=3 uid="uid://c1csriku6k3tb"]
 
 [ext_resource type="Script" path="res://Scripts/Player.cs" id="1_a20u3"]
 [ext_resource type="PackedScene" uid="uid://b16v31matb24" path="res://addons/kaykit_character_pack_adventures/Characters/gltf/Mage.glb" id="2_qlic8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7mp8b"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_v4rvq"]
 
@@ -15,6 +17,14 @@ Speed = 10
 
 [node name="Mage" parent="Pivot" instance=ExtResource("2_qlic8")]
 
+[node name="KickArea" type="Area3D" parent="Pivot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.617004, 0.89896)
+
+[node name="KickZone" type="CollisionShape3D" parent="Pivot/KickArea"]
+shape = SubResource("BoxShape3D_7mp8b")
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00333, 0)
 shape = SubResource("CapsuleShape3D_v4rvq")
+
+[connection signal="body_entered" from="Pivot/KickArea" to="." method="_on_kick_area_body_entered"]

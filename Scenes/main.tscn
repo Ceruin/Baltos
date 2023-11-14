@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://bhfvaeutwksme"]
+[gd_scene load_steps=9 format=3 uid="uid://bhfvaeutwksme"]
 
 [ext_resource type="PackedScene" uid="uid://c1csriku6k3tb" path="res://Scenes/player.tscn" id="1_h3dj2"]
+[ext_resource type="PackedScene" uid="uid://b8ybp8xufexhn" path="res://Scenes/TestBall.tscn" id="2_u0ag3"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_r57q4"]
 size = Vector3(7, 1, 7)
@@ -156,3 +157,6 @@ shape = SubResource("BoxShape3D_r57q4")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Brick11"]
 transform = Transform3D(7, 0, 0, 0, 1, 0, 0, 0, 7, 0, 0, 0)
 mesh = SubResource("BoxMesh_33t07")
+
+[node name="Node3D" parent="." instance=ExtResource("2_u0ag3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.36487, 14.6006)

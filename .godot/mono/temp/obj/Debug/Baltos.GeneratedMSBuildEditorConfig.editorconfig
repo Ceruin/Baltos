@@ -1,6 +1,6 @@
 is_global = true
 build_property.GodotDisabledSourceGenerators = 
-build_property.GodotProjectDir = C:\CLONED REPOS\BALTOS\
+build_property.GodotProjectDir = E:\Development\Godot Development\Baltos\
 build_property.GodotProjectDirBase64 = 
 build_property.GodotSourceGenerators = 
 build_property.IsGodotToolsProject = 
@@ -13,4 +13,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Baltos
-build_property.ProjectDir = C:\CLONED REPOS\BALTOS\
+build_property.ProjectDir = E:\Development\Godot Development\Baltos\

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://b8ybp8xufexhn"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ecfdi"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_d3qt0"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+shape = SubResource("SphereShape3D_ecfdi")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D/CollisionShape3D"]
+mesh = SubResource("SphereMesh_d3qt0")
+skeleton = NodePath("")

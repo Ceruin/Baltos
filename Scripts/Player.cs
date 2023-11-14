@@ -47,7 +47,7 @@ public partial class Player : CharacterBody3D
 
     private void ApplyGravity(double delta)
     {
-        GD.Print($@"On Cieling: {IsOnCeiling()}");
+        //GD.Print($@"On Cieling: {IsOnCeiling()}");
         if (IsOnCeiling()) {
             _velocity.Y = 0;
             _velocity.Y += Gravity * (float)delta;
@@ -56,7 +56,7 @@ public partial class Player : CharacterBody3D
             _velocity.Y += Gravity * (float)delta;
         else if (_velocity.Y <= 0)
             _velocity.Y = 0;
-        GD.Print($@"Velocity: {_velocity.Y}");
+        //GD.Print($@"Velocity: {_velocity.Y}");
     }
 
     private void HandleInput(double delta)
@@ -137,6 +137,16 @@ public partial class Player : CharacterBody3D
         }
     }
 
+    private void _on_kick_area_body_entered(PhysicsBody3D body)
+    {
+        // Check if the entered area is a kickable object
+        if (body is RigidBody3D rigidBody)
+        {
+            // Call the kick method
+            Kick(rigidBody);
+        }
+    }
+
     private void Move()
     {
         Velocity = _velocity;
@@ -154,6 +164,44 @@ public partial class Player : CharacterBody3D
         HandleInput(delta);
         ApplyGravity(delta);
         Move();
+    }
+
+    public override void _Process(double delta)
+    {
+        // Handle kick cooldown
+        if (kickTimer > 0)
+            kickTimer -= (float)delta;
+    }
+
+    private const float KickCooldown = 1.0f; // Set the cooldown time in seconds
+    private float kickTimer = 0.0f;
+
+    private void Kick(RigidBody3D body)
+    {
+        // Set the kick cooldown
+        kickTimer = KickCooldown;
+
+        // Handle the kick logic here
+        GD.Print("Kick!");
+
+        // You can access the object that triggered the kick using area.GetOverlappingBodies()
+        // Apply force or perform any other actions as needed
+
+        // Get the forward direction of the player (normalized)
+        var node = GetNode<Node3D>("Pivot");
+        Vector3 kickDirection = node.Transform.Basis.Z.Normalized();
+
+        // Set the kick force magnitude (adjust as needed)
+        float kickForceMagnitude = 10.0f;
+
+        // Calculate the kick force vector
+        Vector3 kickForce = kickDirection * kickForceMagnitude;
+
+        // Apply the kick force
+        body.ApplyCentralImpulse(kickForce);
+        GD.Print("Forward Direction: " + kickDirection);
+        // todo: make ball apply same physics as player
+        // todo: player gravity to world.
     }
 
     #endregion Methods
