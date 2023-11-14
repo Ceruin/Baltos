@@ -196,7 +196,7 @@ public partial class Player : CharacterBody3D
 
         // Calculate the kick force vector
         Vector3 kickForce = kickDirection * kickForceMagnitude;
-
+        kickForce.Y += 1;
         // Apply the kick force
         body.ApplyCentralImpulse(kickForce);
         GD.Print("Forward Direction: " + kickDirection);
