@@ -63,21 +63,25 @@ public partial class Player : CharacterBody3D
     {
         var direction = Vector3.Zero;
 
+        Camera3D camera = GetNode<Camera3D>("CameraPivot/Camera3D");
+        var forward = -camera.GlobalTransform.Basis.Z;
+        var right = camera.GlobalTransform.Basis.X;
+
         if (Input.IsActionPressed(PlayerStrings.move_up))
         {
-            direction.Z -= 1;
+            direction += forward;
         }
         if (Input.IsActionPressed(PlayerStrings.move_down))
         {
-            direction.Z += 1;
+            direction -= forward;
         }
         if (Input.IsActionPressed(PlayerStrings.move_left))
         {
-            direction.X -= 1;
+            direction -= right;
         }
         if (Input.IsActionPressed(PlayerStrings.move_right))
         {
-            direction.X += 1;
+            direction += right;
         }
 
         if (direction != Vector3.Zero)
