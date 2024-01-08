@@ -1,5 +1,7 @@
-res://Scenes/main.tscn
-res://Scenes/player.tscn
 res://Scenes/friend.tscn
 res://Scenes/TestBall.tscn
-res://Scripts/Player.cs
+res://Scenes/main.tscn
+res://Scenes/player.tscn
+res://Scripts/General/JumpMod.cs
+res://Scripts/Pet/Pet.cs
+res://Scripts/Player/Player.cs

@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://c1csriku6k3tb"]
 
-[ext_resource type="Script" path="res://Scripts/Player.cs" id="1_a20u3"]
+[ext_resource type="Script" path="res://Scripts/Player/Player.cs" id="1_a20u3"]
 [ext_resource type="PackedScene" uid="uid://b16v31matb24" path="res://addons/kaykit_character_pack_adventures/Characters/gltf/Mage.glb" id="2_qlic8"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7mp8b"]

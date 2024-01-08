@@ -15,12 +15,12 @@ public class GravityMod
     public void Apply(CharacterBody3D character, ref Vector3 velocity, double delta)
     {
         //GD.Print($@"On Cieling: {IsOnCeiling()}");
-        if (physicsBody.IsOnCeiling())
+        if (character.IsOnCeiling())
         {
             velocity.Y = 0;
             velocity.Y += Gravity * (float)delta;
         }
-        else if (!physicsBody.IsOnFloor())
+        else if (!character.IsOnFloor())
             velocity.Y += Gravity * (float)delta;
         else if (velocity.Y <= 0)
             velocity.Y = 0;

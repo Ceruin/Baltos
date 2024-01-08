@@ -14,7 +14,6 @@ public partial class Player : CharacterBody3D
     public CoyoteMod Coyote = new();
     #endregion Fields
     #region Properties
-    private float JumpForce => JumpFactor.CalculateJumpForce(Gravity);
     public GravityMod Gravity { get; set; } = new();
     public JumpMod JumpFactor { get; set; } = new();
     public SpeedMod Speed { get; set; } = new();
