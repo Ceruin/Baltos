@@ -5,6 +5,7 @@ public partial class Player : CharacterBody3D
 {
     #region Fields
     private const float KickCooldown = 1.0f;
+    private RigidBody3D _grabbedObject;
     private AnimatedSprite3D _sprite;
     private Vector3 _velocity = Vector3.Zero;
 
@@ -13,21 +14,29 @@ public partial class Player : CharacterBody3D
 
     public CoyoteMod Coyote = new();
     #endregion Fields
+
     #region Properties
     public GravityMod Gravity { get; set; } = new();
     public JumpMod JumpFactor { get; set; } = new();
     public SpeedMod Speed { get; set; } = new();
     #endregion Properties
+
     #region Methods
 
-    private void _on_kick_area_body_entered(PhysicsBody3D body)
+    private void Grab(RigidBody3D body)
     {
-        // Check if the entered area is a kickable object
-        if (body is RigidBody3D rigidBody)
-        {
-            // Call the kick method
-            Kick(rigidBody);
-        }
+        _grabbedObject = body;
+        _grabbedObject.GlobalTransform = GlobalTransform;
+        _grabbedObject.LinearVelocity = Vector3.Zero;
+        _grabbedObject.AngularVelocity = Vector3.Zero;
+        _grabbedObject.CollisionLayer = 0;
+        _grabbedObject.CollisionMask = 0;
+        _grabbedObject.Mode = RigidBody.ModeEnum.Kinematic;
+        _grabbedObject.LinearDamp = 0;
+        _grabbedObject.AngularDamp = 0;
+        _grabbedObject.LinearFactor = Vector3.Zero;
+        _grabbedObject.AngularFactor = Vector3.Zero;
+        _grabbedObject.GravityScale = 0;
     }
 
     private void HandleInput(double delta)
@@ -53,7 +62,7 @@ public partial class Player : CharacterBody3D
 
         if (InputMod.Jump) Jump(); // Implement Jump Buffering
 
-        MoveTowards(direction);
+        UpdateVelocity(direction);
     }
 
     private void Jump()
@@ -65,34 +74,6 @@ public partial class Player : CharacterBody3D
         }
     }
 
-    private void Kick(RigidBody3D body)
-    {
-        // Set the kick cooldown
-        kickTimer = KickCooldown;
-
-        // Handle the kick logic here
-        GD.Print("Kick!");
-
-        // You can access the object that triggered the kick using area.GetOverlappingBodies()
-        // Apply force or perform any other actions as needed
-
-        // Get the forward direction of the player (normalized)
-        var node = GetNode<Node3D>("Pivot");
-        Vector3 kickDirection = node.Transform.Basis.Z.Normalized();
-
-        // Set the kick force magnitude (adjust as needed)
-        float kickForceMagnitude = 10.0f;
-
-        // Calculate the kick force vector
-        Vector3 kickForce = kickDirection * kickForceMagnitude;
-        kickForce.Y += 1;
-        // Apply the kick force
-        body.ApplyCentralImpulse(kickForce);
-        GD.Print("Forward Direction: " + kickDirection);
-        // todo: make ball apply same physics as player
-        // todo: player gravity to world.
-    }
-
     private void Move()
     {
         Velocity = _velocity;
@@ -100,7 +81,28 @@ public partial class Player : CharacterBody3D
         MoveAndSlide();
     }
 
-    private void MoveTowards(Vector3 direction)
+    private void Release(RigidBody3D body)
+    {
+        if (_grabbedObject == null)
+            return;
+
+        _grabbedObject.CollisionLayer = 1;
+        _grabbedObject.CollisionMask = 1;
+        _grabbedObject.Mode = RigidBody.ModeEnum.Rigid;
+        _grabbedObject.LinearDamp = 0.1f;
+        _grabbedObject.AngularDamp = 0.1f;
+        _grabbedObject.LinearFactor = Vector3.One;
+        _grabbedObject.AngularFactor = Vector3.One;
+        _grabbedObject.GravityScale = 1;
+
+        var playerVelocity = _velocity;
+        var throwForce = playerVelocity * 2;
+        _grabbedObject.ApplyCentralImpulse(throwForce);
+
+        _grabbedObject = null;
+    }
+
+    private void UpdateVelocity(Vector3 direction)
     {
         float targetSpeed = direction.Length() > 0 ? Speed.Speed : 0f;
         _velocity.X = Mathf.Lerp(_velocity.X, direction.X * targetSpeed, 0.1f);
