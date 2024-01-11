@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://c1csriku6k3tb"]
+[gd_scene load_steps=6 format=3 uid="uid://c1csriku6k3tb"]
 
 [ext_resource type="Script" path="res://Scripts/Player/Player.cs" id="1_a20u3"]
+[ext_resource type="Texture2D" uid="uid://w7y4dgqn4jx4" path="res://Art/Bunny-P.png" id="2_ovvrj"]
 [ext_resource type="PackedScene" uid="uid://b16v31matb24" path="res://addons/kaykit_character_pack_adventures/Characters/gltf/Mage.glb" id="2_qlic8"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7mp8b"]
@@ -9,13 +10,19 @@
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_a20u3")
-Gravity = -35.0
-JumpHeight = 1.75
-Speed = 10
 
 [node name="Pivot" type="Node3D" parent="."]
 
+[node name="Sprite3D" type="Sprite3D" parent="Pivot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.720415, 0)
+pixel_size = 0.059
+billboard = 2
+alpha_cut = 2
+texture_filter = 0
+texture = ExtResource("2_ovvrj")
+
 [node name="Mage" parent="Pivot" instance=ExtResource("2_qlic8")]
+visible = false
 
 [node name="KickArea" type="Area3D" parent="Pivot"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.617004, 0.89896)
