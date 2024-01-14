@@ -1,8 +1,8 @@
+Sprite3D
 CollisionShape3D
 Node3D
 StaticBody3D
 Node
-Sprite3D
 RigidBody3D
 MeshInstance3D
 Area3D

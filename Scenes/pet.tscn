@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://d081kcahtnxlc"]
+
+[ext_resource type="Texture2D" uid="uid://d38mijqwkudil" path="res://Art/Cu.png" id="1_31sq5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3vhhk"]
+size = Vector3(1.88496, 0.984531, 0.153046)
+
+[node name="Friend" type="CharacterBody3D"]
+
+[node name="Pivot" type="Node3D" parent="."]
+
+[node name="Sprite3D" type="Sprite3D" parent="Pivot"]
+transform = Transform3D(5, 0, 0, 0, 5.91, 0, 0, 0, 1.126, 0, 0.490939, 0)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("1_31sq5")
+
+[node name="VisibleOnScreenNotifier3D" type="VisibleOnScreenNotifier3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.253541, 0)
+aabb = AABB(-0.409715, -0.292683, -0.393315, 0.81943, 0.585366, 0.786631)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.599444, 0, 0, 0, 0.725637, 0, 0, 0, 1, 0, 0.47265, 0)
+shape = SubResource("BoxShape3D_3vhhk")

@@ -1,5 +1,5 @@
 7555aeb530264b75188b2fe7cefa125f
-::res://::1704950982
+::res://::1705270564
 icon.svg::CompressedTexture2D::7412979503199849142::1696996519::1696996523::1::::<><>::
 README.md::TextFile::-1::1697841301::0::1::::<><>::
 ::res://addons/::1697848749
@@ -703,31 +703,35 @@ VoxData.gd::GDScript::-1::1697841301::0::1::::<>RefCounted<>::
 VoxLayer.gd::GDScript::-1::1697841301::0::1::::<>RefCounted<>::
 VoxMaterial.gd::GDScript::-1::1697841301::0::1::::<>RefCounted<>::
 VoxNode.gd::GDScript::-1::1697841301::0::1::::<>RefCounted<>::
-::res://Art/::1704949140
+::res://Art/::1705270564
 Bunny-P.png::CompressedTexture2D::1611723811600629511::1704949034::1704949140::1::::<><>::
+Chalice.png::CompressedTexture2D::6450420839075571685::1705215531::1705215577::1::::<><>::
+Cu.png::CompressedTexture2D::9193417527533373735::1705215551::1705270559::1::::<><>::
+Dic.png::CompressedTexture2D::2128007571190499040::1705215570::1705270564::1::::<><>::
+Ti.png::CompressedTexture2D::1723055876931031142::1705215562::1705270538::1::::<><>::
 ::res://Models/::1704948651
 brick.vox::Mesh::6855233230847299025::1704922405::1704948651::1::::<><>::
 ::res://Models Usable/::1704948652
 brick.obj::Mesh::4976414877499193275::1704922436::1704948652::1::::<><>::uid://di6pr5kfv4mhm
 brick.png::CompressedTexture2D::7785711215352238082::1704922436::1704948651::1::::<><>::
-::res://Scenes/::1704950975
-Brick.tscn::PackedScene::7550974179943036565::1704950868::0::1::::<><>::uid://cc5u3c25ihqf0::::res://Models Usable/brick.obj
-friend.tscn::PackedScene::8983704213055738956::1704950868::0::1::::<><>::uid://q2uopgdi2bvj::::res://addons/kaykit_dungeon_remastered/Assets/gltf/sword_shield.gltf.glb
-main.tscn::PackedScene::2889339776660297972::1704950975::0::1::::<><>::uid://c1csriku6k3tb::::res://Scenes/player.tscn<>uid://b8ybp8xufexhn::::res://Scenes/TestBall.tscn<>uid://dft0pan82uggb::::res://Scenes/Brick.tscn
-player.tscn::PackedScene::6603003758434749495::1704950868::0::1::::<><>::res://Scripts/Player/Player.cs<>uid://w7y4dgqn4jx4::::res://Art/Bunny-P.png<>uid://b16v31matb24::::res://addons/kaykit_character_pack_adventures/Characters/gltf/Mage.glb
-TestBall.tscn::PackedScene::4752286863463574791::1704950868::0::1::::<><>::
+::res://Scenes/::1705270564
+Brick.tscn::PackedScene::7550974179943036565::1705270474::0::1::::<><>::uid://cc5u3c25ihqf0::::res://Models Usable/brick.obj
+main.tscn::PackedScene::2889339776660297972::1705270473::0::1::::<><>::uid://c1csriku6k3tb::::res://Scenes/player.tscn<>uid://b8ybp8xufexhn::::res://Scenes/TestBall.tscn<>uid://dft0pan82uggb::::res://Scenes/Brick.tscn
+pet.tscn::PackedScene::8983704213055738956::1705270559::0::1::::<><>::uid://d38mijqwkudil::::res://Art/Cu.png
+player.tscn::PackedScene::6603003758434749495::1705270564::0::1::::<><>::res://Scripts/Player/Player.cs<>uid://5k28dx56ipwi::::res://Art/Dic.png
+TestBall.tscn::PackedScene::4752286863463574791::1705270538::0::1::::<><>::
 ::res://Scripts/::1704497847
 ::res://Scripts/General/::1704616735
 GrabbableMod.cs::CSharpScript::-1::1704497847::0::1::::<><>::
 GravityMod.cs::CSharpScript::-1::1704616735::0::1::::<><>::
 JumpMod.cs::CSharpScript::-1::1704497847::0::1::::<><>::
 SpeedMod.cs::CSharpScript::-1::1704497847::0::1::::<><>::
-::res://Scripts/Pet/::1704497847
-HappinessMod.cs::CSharpScript::-1::1704497847::0::1::::<><>::
-HealthMod.cs::CSharpScript::-1::1704497847::0::1::::<><>::
+::res://Scripts/Pet/::1704951055
+HappinessMod.cs::CSharpScript::-1::1704951055::0::1::::<><>::
+HealthMod.cs::CSharpScript::-1::1704951055::0::1::::<><>::
 Pet.cs::CSharpScript::-1::1704497848::0::1::::<><>::
-::res://Scripts/Player/::1704524504
+::res://Scripts/Player/::1705215649
 CoyoteMod.cs::CSharpScript::-1::1704497848::0::1::::<><>::
 InputMod.cs::CSharpScript::-1::1704497848::0::1::::<><>::
-Player.cs::CSharpScript::-1::1704524504::0::1::::<><>::
+Player.cs::CSharpScript::-1::1705215649::0::1::::<><>::
 PlayerStrings.cs::CSharpScript::-1::1704497848::0::1::::<><>::

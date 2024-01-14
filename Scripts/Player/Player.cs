@@ -31,11 +31,11 @@ public partial class Player : CharacterBody3D
         _grabbedObject.AngularVelocity = Vector3.Zero;
         _grabbedObject.CollisionLayer = 0;
         _grabbedObject.CollisionMask = 0;
-        _grabbedObject.Mode = RigidBody.ModeEnum.Kinematic;
+        //_grabbedObject.Mode = RigidBody.ModeEnum.Kinematic;
         _grabbedObject.LinearDamp = 0;
         _grabbedObject.AngularDamp = 0;
-        _grabbedObject.LinearFactor = Vector3.Zero;
-        _grabbedObject.AngularFactor = Vector3.Zero;
+       // _grabbedObject.LinearFactor = Vector3.Zero;
+        //_grabbedObject.AngularFactor = Vector3.Zero;
         _grabbedObject.GravityScale = 0;
     }
 
@@ -88,11 +88,11 @@ public partial class Player : CharacterBody3D
 
         _grabbedObject.CollisionLayer = 1;
         _grabbedObject.CollisionMask = 1;
-        _grabbedObject.Mode = RigidBody.ModeEnum.Rigid;
+        //_grabbedObject.Mode = RigidBody.ModeEnum.Rigid;
         _grabbedObject.LinearDamp = 0.1f;
         _grabbedObject.AngularDamp = 0.1f;
-        _grabbedObject.LinearFactor = Vector3.One;
-        _grabbedObject.AngularFactor = Vector3.One;
+        //_grabbedObject.LinearFactor = Vector3.One;
+        //_grabbedObject.AngularFactor = Vector3.One;
         _grabbedObject.GravityScale = 1;
 
         var playerVelocity = _velocity;
